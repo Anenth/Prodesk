@@ -22,6 +22,11 @@ node_modules/
 # Firebase
 functions/.runtimeconfig.json
 
+# Build files
+assets/css/
+assets/js/
+assets/images/
+
 # Other unneeded files
 doc/
 *.swp
