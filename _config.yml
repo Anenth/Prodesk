@@ -45,7 +45,15 @@ exclude:
   - README.md
   - CNAME
   - functions
+  - old_functions
   - firebase.json
+  - database.rules.json
   - emails
   - gulpfile.js
   - config.js
+  - node_modules
+  - package.json
+  - yarn.lock
+  - node_modules
+  - script
+  
