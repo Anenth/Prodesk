@@ -31,11 +31,6 @@ kramdown:
   syntax_highlighter_opts:
     css_class: 'highlight'
 
-sass:
-  sass_dir: _sass
-  sourcemap: true
-  style: :compressed
-
 include: ["_pages"]
 
 plugins:
@@ -52,7 +47,5 @@ exclude:
   - functions
   - firebase.json
   - emails
-
-assets:
-  autoprefixer:
-    browsers: ["last 2 versions","> 5%","IE 9"]
+  - gulpfile.js
+  - config.js

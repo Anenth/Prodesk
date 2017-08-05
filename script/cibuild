@@ -3,12 +3,10 @@ set -e # halt script on error
 
 echo "==> Building the site…"
 set JEKYLL_ENV=production
-bundle exec jekyll build
-ls -l
-
+yarn run build
+bundle exec htmlproofer ./_site
 
 # #!/usr/bin/env bash
 
 
 # bundle exec jekyll build
-# bundle exec htmlproofer ./_site

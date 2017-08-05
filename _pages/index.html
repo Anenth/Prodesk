@@ -14,7 +14,7 @@ active: home
     <div class="row sm-text-center">
       <div class="col-md-5 visible-xs">
         <img class="lazy home-section-image__right img-responsive" 
-        src="./images/products/table-front-left.png" data-swiper-parallax="-20%" alt="">
+        src="./assets/images/products/table-front-left.png" data-swiper-parallax="-20%" alt="">
       </div>
       
       <div class="col-md-7 p-t-80 p-b-100 sm-p-t-10 sm-p-b-40">
@@ -26,7 +26,7 @@ active: home
       </div>
       <div class="col-md-5 text-center p-t-50 p-b-100 hidden-xs">
         <img class="lazy home-section-image__right img-responsive" 
-        src="./images/products/table-front-left.png" data-swiper-parallax="-20%" alt="">
+        src="./assets/images/products/table-front-left.png" data-swiper-parallax="-20%" alt="">
       </div>     
     </div>
   </div>
@@ -37,7 +37,7 @@ active: home
     <div class="row sm-m-l-15 sm-m-r-15">
       <div class="col-md-6 col-middle">
         <img class="p-r-40 sm-m-b-20 xs-image-responsive-height sm-no-padding lazy img-responsive"
-        src="./images/products/table-front-left-with-mon.png" alt="">
+        src="./assets/images/products/table-front-left-with-mon.png" alt="">
       </div>
       <div class="col-md-6">
         <h6 class="block-title">Built with the Best</h6>
@@ -67,7 +67,7 @@ active: home
       <div class="swiper-wrapper">
         {% for image in prodesk.images %}
         <div class="swiper-slide">
-          <img data-src="./images/products/{{image}}" class="swiper-lazy">
+          <img data-src="./assets/images/products/{{image}}" class="swiper-lazy">
           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         </div>
         {% endfor %}
@@ -84,7 +84,7 @@ active: home
     <div class="row-flex row-flex-center">
       {% for testimonial in testimonials %}
       <div class="logo-client m-r-15">
-        <img src="./images/clients/{{testimonial.logo}}" 
+        <img src="./assets/images/clients/{{testimonial.logo}}" 
         alt="{{testimonial.name}} logo"
         class="lazy">
       </div>

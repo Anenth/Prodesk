@@ -42,7 +42,7 @@ module.exports = {
 
   js: {
     entry: [
-      "main.js",
+      "app.js", "page.js"
     ],
   },
 }
