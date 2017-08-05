@@ -1,5 +1,32 @@
-_site
+# Apache
+.htaccess
+.htpasswd
+
+# Sass
 .sass-cache
+*.scssc
+
+# Jekyll
+_site
 .jekyll-metadata
+
+# Node.js
 node_modules/
+
+# Logfiles and tempfiles
+*.log
+/log/*
+!/log/.keep
+/tmp
+
+# Firebase
 functions/.runtimeconfig.json
+
+# Other unneeded files
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
