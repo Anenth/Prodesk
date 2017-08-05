@@ -16,7 +16,6 @@ before_install:
 
 install:
   - bundle install
-  - gem install html-proofer
   - npm install yarn -g
   - yarn
   - npm install -g firebase-tools
