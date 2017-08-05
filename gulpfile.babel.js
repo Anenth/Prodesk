@@ -159,10 +159,24 @@ gulp.task('webpack', ['eslint'], function (callback) {
   });
 });
 
+gulp.task('server-webpack', ['webpack'], function() {
+
+	const server = new WebpackDevServer(webpack(webpackConfig), {
+		// publicPath: '/' + myConfig.output.publicPath,
+		stats: {
+			colors: true
+		},
+		hot: true
+  });
+  server.listen(8080, 'localhost', function(err) {
+		if(err) throw new gutil.PluginError('webpack-dev-server', err);
+	});
+});
+
 // For internal use only
 gulp.task('_webpack', function () {
   argv.watch = true;
-  gulp.start('webpack');
+  gulp.start('server-webpack');
 });
 
 /**
@@ -221,24 +235,3 @@ gulp.task('default', tasks, function () {
  * Test
  */
 gulp.task('test', ['build']);
-
-
-
-// gulp.task('server', ['webpack'], function(callback) {
-// 	// modify some webpack config options
-// 	var myConfig = Object.create(webpackConfig);
-// 	myConfig.devtool = 'eval';
-// 	myConfig.debug = true;
-
-// 	// Start a webpack-dev-server
-// 	new WebpackDevServer(webpack(myConfig), {
-// 		publicPath: '/' + myConfig.output.publicPath,
-// 		stats: {
-// 			colors: true
-// 		},
-// 		hot: true
-// 	}).listen(8080, 'localhost', function(err) {
-// 		if(err) throw new gutil.PluginError('webpack-dev-server', err);
-// 		gutil.log('[webpack-dev-server]', 'http://localhost:8080/webpack-dev-server/index.html');
-// 	});
-// });
