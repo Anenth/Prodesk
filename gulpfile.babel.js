@@ -1,21 +1,25 @@
-'use strict';
+import argv         from 'yargs';
+import autoprefixer from 'autoprefixer';
+import Browsersync  from 'browser-sync';
+import cp           from 'child_process';
+import eslint       from 'gulp-eslint';
+import gulp         from 'gulp';
+import imagemin     from 'gulp-imagemin';
+import named        from 'vinyl-named';
+import newer        from 'gulp-newer';
+import plumber      from 'gulp-plumber';
+import pngquant     from 'imagemin-pngquant';
+import postcss      from 'gulp-postcss';
+import sass         from 'gulp-sass';
+import uglify       from 'gulp-uglify';
+import watch        from 'gulp-watch';
+// var webpack      = require('webpack-stream');
+const browsersync = Browsersync.create();
 
-var argv         = require('yargs').argv;
-var autoprefixer = require('autoprefixer');
-var browsersync  = require('browser-sync').create();
-var cp           = require('child_process');
-var eslint       = require('gulp-eslint');
-var gulp         = require('gulp');
-var imagemin     = require('gulp-imagemin');
-var named        = require('vinyl-named');
-var newer        = require('gulp-newer');
-var plumber      = require('gulp-plumber');
-var pngquant     = require('imagemin-pngquant');
-var postcss      = require('gulp-postcss');
-var sass         = require('gulp-sass');
-var uglify       = require('gulp-uglify');
-var watch        = require('gulp-watch');
-var webpack      = require('webpack-stream');
+import webpack from 'webpack';
+import webpackConfig from './webpack.config.babel';
+import WebpackDevServer from 'webpack-dev-server';
+import gutil from 'gulp-util';
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
@@ -63,6 +67,7 @@ for (var i = 0; i <= config.js.entry.length - 1; i++) {
  */
 gulp.task('jekyll-build', function (done) {
   var jekyllConfig = config.jekyll.config.default;
+  console.log(argv.production);
   if (argv.production) {
     process.env.JEKYLL_ENV = 'production';
     jekyllConfig += config.jekyll.config.production ? ',' + config.jekyll.config.production : '';
@@ -137,15 +142,21 @@ gulp.task('eslint', function() {
  *
  * Bundle JavaScript files
  */
-gulp.task('webpack', ['eslint'], function () {
-  return gulp.src(entry)
-    .pipe(plumber())
-    .pipe(named())
-    .pipe(webpack({
-      watch: argv.watch ? true : false,
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
+gulp.task('webpack', ['eslint'], function (callback) {
+  var myConfig = Object.create(webpackConfig);
+  myConfig.plugins = [
+		new webpack.optimize.UglifyJsPlugin()
+  ];
+
+  // run webpack
+  webpack(myConfig, function(err, stats) {
+    if (err) throw new gutil.PluginError('webpack', err);
+    gutil.log('[webpack]', stats.toString({
+      colors: true,
+      progress: true
+    }));
+    callback();
+  });
 });
 
 // For internal use only
@@ -210,3 +221,24 @@ gulp.task('default', tasks, function () {
  * Test
  */
 gulp.task('test', ['build']);
+
+
+
+// gulp.task('server', ['webpack'], function(callback) {
+// 	// modify some webpack config options
+// 	var myConfig = Object.create(webpackConfig);
+// 	myConfig.devtool = 'eval';
+// 	myConfig.debug = true;
+
+// 	// Start a webpack-dev-server
+// 	new WebpackDevServer(webpack(myConfig), {
+// 		publicPath: '/' + myConfig.output.publicPath,
+// 		stats: {
+// 			colors: true
+// 		},
+// 		hot: true
+// 	}).listen(8080, 'localhost', function(err) {
+// 		if(err) throw new gutil.PluginError('webpack-dev-server', err);
+// 		gutil.log('[webpack-dev-server]', 'http://localhost:8080/webpack-dev-server/index.html');
+// 	});
+// });

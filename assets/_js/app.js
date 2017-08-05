@@ -1,3 +1,5 @@
+import './page'
+
 function lazyLoadImages() {
     var imgElement = document.querySelectorAll('.lazy');
     for (var i = 0; i < imgElement.length; ++i) {

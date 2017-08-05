@@ -41,8 +41,6 @@ module.exports = {
   },
 
   js: {
-    entry: [
-      "app.js", "page.js"
-    ],
+    entry: ["app.js"],
   },
 }
