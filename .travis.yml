@@ -19,9 +19,9 @@ install:
   - npm install yarn -g
   - yarn
   - npm install -g firebase-tools
-  - cd ./functions
-  - yarn
-  - cd ..
+  # - cd ./functions
+  # - yarn
+  # - cd ..
 
 before_script:
  - chmod +x ./script/cibuild # or do this locally and commit
