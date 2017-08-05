@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "firebase-functions": "^0.5.9",
+    "loadcss": "^0.0.2",
     "webfontloader": "^1.6.28"
   }
 }

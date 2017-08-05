@@ -1127,6 +1127,10 @@ bytes@2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-2.5.0.tgz#4c9423ea2d252c270c41b2bdefeff9bb6b62c06a"
 
+callasync@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/callasync/-/callasync-1.0.2.tgz#091d2c82c228bff69ba9b61a2d668281127ed350"
+
 caller-path@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
@@ -3811,6 +3815,12 @@ load-json-file@^2.0.0:
     parse-json "^2.2.0"
     pify "^2.0.0"
     strip-bom "^3.0.0"
+
+loadcss@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/loadcss/-/loadcss-0.0.2.tgz#7939a44916cd26d8d03babaea5350af9c53ce5cd"
+  dependencies:
+    callasync "^1.0.0"
 
 loader-runner@^2.3.0:
   version "2.3.0"
