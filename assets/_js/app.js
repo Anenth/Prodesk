@@ -1,4 +1,11 @@
-import './page'
+import './page';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+    google: {
+        families: ['Montserrat:400,700', 'Open+Sans:300,400,700']
+    }
+});
 
 function lazyLoadImages() {
     var imgElement = document.querySelectorAll('.lazy');
