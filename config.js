@@ -6,6 +6,7 @@ module.exports = {
     sass:       true,
     server:     true,
     webpack:    true,
+    critical:    true
   },
 
   paths: {
@@ -13,6 +14,7 @@ module.exports = {
     posts:     "_posts",
     assets:    "./assets",
     css:       "css",
+    criticalCss: "_includes/critical.css",
     js:        "js",
     images:    "images",
     sass:      "_sass",

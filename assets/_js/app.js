@@ -9,7 +9,11 @@ WebFont.load({
 });
 
 function lazyLoadCss() {
-    loadcss('https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css');
+    const cssFiles = [
+        '/assets/css/main.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'
+    ]
+    loadcss(cssFiles);
 }
 
 

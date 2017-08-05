@@ -21,6 +21,7 @@ import webpack from 'webpack';
 import webpackConfig from './webpack.config.babel';
 import WebpackDevServer from 'webpack-dev-server';
 import gutil from 'gulp-util';
+import critical from 'critical';
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
@@ -238,3 +239,16 @@ gulp.task('default', tasks, function () {
  * Test
  */
 gulp.task('test', ['build']);
+
+
+gulp.task('critical', function () {
+    critical.generate({
+        base: './',
+        src: '_site/index.html',
+        css: '_site/assets/css/main.css',
+        dest: config.paths.criticalCss,
+        width: 1200,
+        height: 800,
+        minify: true
+    });
+});
