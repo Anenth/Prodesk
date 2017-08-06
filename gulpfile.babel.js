@@ -69,7 +69,6 @@ for (var i = 0; i <= config.js.entry.length - 1; i++) {
  */
 gulp.task('jekyll-build', function (done) {
   var jekyllConfig = config.jekyll.config.default;
-  console.log(argv.production);
   if (argv.production) {
     process.env.JEKYLL_ENV = 'production';
     jekyllConfig += config.jekyll.config.production ? ',' + config.jekyll.config.production : '';

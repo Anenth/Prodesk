@@ -1,16 +1,11 @@
 import './page';
-import WebFont from 'webfontloader';
 import loadcss from 'loadcss';
 
-WebFont.load({
-    google: {
-        families: ['Montserrat:400,700', 'Open+Sans:300,400,700']
-    }
-});
 
 function lazyLoadCss() {
     const cssFiles = [
         '/assets/css/main.css',
+        'https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,700',
         'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'
     ]
     loadcss(cssFiles);
