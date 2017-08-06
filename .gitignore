@@ -21,6 +21,7 @@ node_modules/
 
 # Firebase
 functions/.runtimeconfig.json
+old_functions/.runtimeconfig.json
 
 # Build files
 assets/css/
