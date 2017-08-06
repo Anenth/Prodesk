@@ -186,8 +186,8 @@ gulp.task('_webpack', function () {
 /**
  * Build
  */
-gulp.task('build', [...build, 'jekyll-build'], function (done) {
-  gulp.start('critical');
+gulp.task('build', build, function (done) {
+  gulp.start('jekyll-build');
 });
 
 /**
@@ -233,7 +233,7 @@ gulp.task('default', tasks, function () {
 gulp.task('test', ['build']);
 
 
-gulp.task('critical', function () {
+gulp.task('critical', ['jekyll-build'], function () {
     critical.generate({
         base: './',
         src: '_site/index.html',

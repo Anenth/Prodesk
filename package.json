@@ -43,11 +43,10 @@
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1",
     "webpack-stream": "^3.2.0",
-    "yargs": "^8.0.2"
+    "yargs": "^8.0.2",
+    "loadcss": "^0.0.2"
   },
   "dependencies": {
-    "firebase-functions": "^0.5.9",
-    "loadcss": "^0.0.2",
-    "webfontloader": "^1.6.28"
+    "firebase-functions": "^0.5.9"
   }
 }

@@ -27,7 +27,7 @@ old_functions/.runtimeconfig.json
 assets/css/
 assets/js/
 assets/images/
-# _includes/critical.css
+_includes/critical.css
 
 # Other unneeded files
 doc/
