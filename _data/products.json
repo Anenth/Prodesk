@@ -5,5 +5,12 @@
     images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
     height: "56cm",
     width: "87cm"
+  },
+  rise: {
+    price: 34900,
+    main_image: "assets/images/products/table-front-left.png",
+    images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
+    height: "56cm",
+    width: "87cm"
   }
 }

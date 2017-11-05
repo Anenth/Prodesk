@@ -11,5 +11,8 @@
         "assets/css": true,
         "assets/images": true,
         "assets/js": true
-    }
+    },
+    "cSpell.words": [
+        "healthydesk"
+    ]
 }

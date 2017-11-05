@@ -71,29 +71,6 @@
     top: 25px;
 }
 
-.jumbotron {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    padding: 0;
-    margin-bottom: 0;
-    background-color: #f0f0f0;
-}
-
-.jumbotron .inner {
-    position: relative;
-    z-index: 2;
-}
-
-.jumbotron.lg {
-    height: 600px;
-}
-
-.jumbotron h1 {
-    font-size: 44px;
-    color: #2c2c2c;
-}
-
 .pace .pace-progress {
     background-color: #6d5cae;
 }

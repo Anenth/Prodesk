@@ -498,8 +498,7 @@ fieldset[disabled] .btn-danger.active {
 
 .btn-lg,
 .btn-group-lg>.btn {
-    padding-left: 28px;
-    padding-right: 28px;
+    padding: 15px 30px;
     line-height: 23px;
 }
 
@@ -918,90 +917,6 @@ fieldset[disabled] .btn-danger.active {
     z-index: 600;
 }
 
-.btn-animated {
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-
-.btn-animated>span {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-
-.btn-animated:before {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 2.5;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-.btn-animated:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-.btn-animated.from-top:before {
-    left: 0;
-    top: -100%;
-}
-
-.btn-animated.from-top:hover:before,
-.btn-animated.from-top.show-icon:before {
-    top: 0;
-}
-
-.btn-animated.from-top:hover>span,
-.btn-animated.from-top.show-icon>span {
-    -webkit-transform: translateY(300%);
-    -ms-transform: translateY(300%);
-    transform: translateY(300%);
-}
-
-.btn-animated.from-left:before {
-    left: -100%;
-    top: 0;
-}
-
-.btn-animated.from-left:hover:before,
-.btn-animated.from-left.show-icon:before {
-    left: 0;
-}
-
-.btn-animated.from-left:hover>span,
-.btn-animated.from-left.show-icon>span {
-    -webkit-transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    transform: translateX(200%);
-}
-
-.btn-animated.fa:before {
-    font-family: FontAwesome;
-}
-
-.btn-animated.pg:before {
-    font-family: "pages-icon";
-}
-
 .btn-tag {
     line-height: 17px;
     border-radius: 17px 3px 3px 17px;
@@ -1124,4 +1039,19 @@ fieldset[disabled] .btn-danger.active {
 
 .menu-content[data-pages-direction="slideTop"] {
     top: 0;
+}
+
+.btn-loading,
+.btn-loading[disabled]  {
+    position: relative;
+    color: transparent;
+    
+    &:after {
+        color: #fff;
+        content: 'Saving...';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
 }
