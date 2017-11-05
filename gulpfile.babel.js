@@ -75,7 +75,7 @@ gulp.task('jekyll-build', function (done) {
   } else {
     jekyllConfig += config.jekyll.config.development ? ',' + config.jekyll.config.development : '';
   }
-  return cp.spawn(jekyll, ['build', '--config', jekyllConfig], {stdio: 'inherit', env: process.env})
+  return cp.spawn('bundle', ['exec', jekyll, 'build', '--config', jekyllConfig], {stdio: 'inherit', env: process.env})
     .on('close', done);
 });
 
