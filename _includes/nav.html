@@ -1,68 +1,77 @@
- <nav 
-    class="header {% if page.active == 'home' %}bg-header transparent-light{% endif %}" 
-    data-pages="header" 
-    data-pages-header="autoresize" 
-    data-pages-resize-class="dark">
+<nav class="header {% if page.active == 'home' %}bg-header transparent-light{% endif %}" data-pages="header" data-pages-header="autoresize"
+  data-pages-resize-class="dark">
 
-    <div class="container relative">
-      <div class="pull-left">
-        <div class="header-inner">
-          
-         <div class="header-logo">
-           <a href="{{ site.baseurl }}/" 
-            class="header-logo__title {% if page.active == 'home' %} text-white {%else%} header-logo__title {% endif %}">
+  <div class="container relative">
+    <div class="pull-left">
+      <div class="header-inner">
+
+        <div class="header-logo">
+          <a href="{{ site.baseurl }}/" class="header-logo__title {% if page.active == 'home' %} text-white {%else%} header-logo__title {% endif %}">
             ProDesk Life
           </a>
-          </div>
-
-        </div>
-      </div>
-      <div class="pull-right">
-        <div class="header-inner">
-          <div class="visible-sm-inline visible-xs-inline menu-toggler pull-right p-l-10" data-pages="header-toggle" data-pages-element="#header">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="pull-right menu-content clearfix" data-pages-direction="slideRight" id="header">
-
-        <div class="pull-right">
-          <a href="#" 
-            class="padding-10 visible-xs-inline visible-sm-inline pull-right m-t-10 m-b-10 m-r-10" 
-            data-pages="header-toggle"
-            data-pages-element="#header">
-            &times;
-          </a>
-        </div>
-
-
-        <div class="header-inner">
-          <ul class="menu">
-            {% for link in site.data.navigation.masthead %}
-              {% assign class = nil %}
-              {% if page.url contains link.url %}
-                {% assign class = 'active' %}
-              {% endif %}
-              <li>
-                <a href="{{ link.url }}" 
-                  data-text="{{link.title}}"
-                  class="{{ class }}">{{ link.title }}
-                </a>
-              </li>
-            {% endfor %}
-            
-            <li>
-              <a class="btn btn-sm fs-12 hidden-sm hidden-xs {% if page.active == 'home' %}btn-bordered  btn-white{% endif %}" href="#contact">Contact Us</a>
-              <a class="btn btn-bordered fs-12 btn-black  font-montserrat fs-12 all-caps pull-bottom visible-sm visible-xs buy-now sm-static sm-m-l-20 sm-m-r-20 sm-m-t-20"
-                href="#contact">Contact Us</a>
-            </li>
-          </ul>
         </div>
 
       </div>
     </div>
-  </nav>
+    <div class="pull-right">
+      <div class="header-inner">
+        <div class="visible-sm-inline visible-xs-inline menu-toggler pull-right p-l-10" data-pages="header-toggle" data-pages-element="#header">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="pull-right menu-content clearfix" data-pages-direction="slideRight" id="header">
+
+      <div class="pull-right">
+        <a href="#" class="padding-10 visible-xs-inline visible-sm-inline pull-right m-t-10 m-b-10 m-r-10" data-pages="header-toggle"
+          data-pages-element="#header">
+          &times;
+        </a>
+      </div>
+
+
+      <div class="header-inner">
+        <ul class="menu">
+          {% for link in site.data.navigation.masthead %}
+           {% assign class = nil %} 
+           {% if page.url contains link.url %} {% assign class='active' %} {% endif %}
+
+          <li>
+            <a href="{{ link.url }}" data-text="{{link.title}}" class="{{ class }}">{{ link.title }}
+            </a>
+          </li>
+          {% endfor %}
+          <li class="classic">
+            <a href="javascript:;" data-text="Products">
+              Products
+              <i class="fa fa-angle-down m-l-5"></i>
+            </a>
+            <nav class="classic">
+              <span class="arrow"></span>
+              <ul>
+                {% for link in site.data.navigation.products %} 
+                {% assign class = nil %} {% if page.url contains link.url %} {% assign class='active' %} {% endif %}
+                <li>
+                  <a href="{{ link.url }}" data-text="{{link.title}}" class="{{ class }}">{{ link.title }}
+                  </a>
+                  {% if link.hightlight %} <span class="label">new</span> {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </li>
+          <li>
+            <a class="btn btn-sm fs-12 hidden-sm hidden-xs {% if page.active == 'home' %}btn-bordered  btn-white{% endif %}" href="#contact">Contact Us</a>
+            <a class="btn btn-bordered fs-12 btn-black  font-montserrat fs-12 all-caps pull-bottom visible-sm visible-xs buy-now sm-static sm-m-l-20 sm-m-r-20 sm-m-t-20"
+              href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</nav>

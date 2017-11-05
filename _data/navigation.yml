@@ -1,12 +1,20 @@
 masthead:
-  - title: "Home"
-    url: /
   - title: "Why Stand & Work?"
     url: /Why-stand-and-work
-  
+
+products: 
+    - title: "Prodesk Classic"
+      url: /
+    - title: "Prodesk Rise"
+      url: /rise
+      highlight: true
+
 footer:
-  - title: "Home"
+  - title: "Prodesk Classic"
     url: /
+  - title: "Prodesk Rise"
+    url: /rise
+    highlight: true
   - title: "Blog"
     url: /blog
   - title: "About us"
