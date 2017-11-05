@@ -1,54 +1,45 @@
-<section id="contact" class="bg-master-light">
+<section id="contact" class="bg-master-dark">
   <div class="container p-b-50 p-t-50 sm-no-padding">
-    <div class="text-center m-b-30 hidden-sm hidden-xs">
-      <h1 class="semi-bold no-margin">Connect With Us</h1>
+    <div class="m-b-30 hidden-sm hidden-xs">
+      <h1 class="semi-bold no-margin text-white">Connect With Us</h1>
       <p class="semi-bold no-margin color-text-gradient">We'd love to hear from you!</p>
     </div>
-    
-    <div class="card">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="card__content">
-            <div class="sm-p-t-10">
-              <h3 class="semi-bold m-b-30 m-t-0">Request Demo</h3>
-              
-              {% include contact_form.html %}
-            </div>
+    <div class="row">
+
+      <div class="col-md-6">
+        <!-- <h3 class="text-white semi-bold m-b-30 m-t-0">Contact Information</h3> -->
+        <div class="m-b-45 row">
+          <div class="col-xs-2">
+            <i class="m-t-5 fa fa-phone fa-4x" aria-hidden="true"></i>
+          </div>
+          <div class="pull-left">
+            <h4 class="text-white no-margin semi-bold">Reach Us</h4>
+            <a class="text-primary semi-bold h3" href="tel:{{ site.social.phone }}">{{ site.social.phone }}</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="m-b-45 row">
+          <div class="col-xs-2">
+            <i class="m-t-5 fa fa-envelope fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="pull-left">
+            <h4 class="text-white no-margin semi-bold">Say Hello!</h4>
+            <a class="text-primary semi-bold h3" href="mailto:{{ site.social.email }}" target="_blank">{{ site.social.email }}</a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card__content bg-master-dark">
-            <h3 class="text-white semi-bold m-b-30 m-t-0">Contact Information</h3>
-            <div class="m-b-45 row">
-              <div class="col-xs-3">
-                <i class="m-t-5 fa fa-phone fa-4x" aria-hidden="true"></i>
-              </div>
-              <div class="pull-left">
-                <h4 class="text-white no-margin semi-bold">Reach Us</h4>
-                <a class="text-white semi-bold" 
-                href="tel:{{ site.social.phone }}">{{ site.social.phone }}</a>
-              </div>
-              
-            </div>
-            <div class="m-b-45 row">
-              <div class="col-xs-3">
-                <i class="m-t-10 fa fa-map fa-3x" aria-hidden="true"></i>
-              </div>
-              <div class="pull-left">
-                <h4 class="text-white no-margin semi-bold">Location</h4>
-                <div class="text-white semi-bold">{{ site.social.location }}</div>
-              </div>
-            </div>
-            <div class="m-b-45 row">
-              <div class="col-xs-3">
-                <i class="m-t-5 fa fa-envelope fa-3x" aria-hidden="true"></i>
-              </div>
-              <div class="pull-left">
-                <h4 class="text-white no-margin semi-bold">Say Hello!</h4>
-                <a class="text-white semi-bold" 
-                href="mailto:{{ site.social.email }}" target="_blank">{{ site.social.email }}</a>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="m-b-45 row">
+          <div class="col-xs-2">
+            <i class="m-t-10 fa fa-map fa-3x" aria-hidden="true"></i>
+          </div>
+          <div class="pull-left">
+            <h4 class="text-white no-margin semi-bold">Location</h4>
+            <div class="text-white semi-bold">{{ site.social.location }}</div>
           </div>
         </div>
       </div>
