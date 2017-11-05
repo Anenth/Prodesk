@@ -10,7 +10,7 @@ cache:
   bundler: true
 
 before_install:
-  - nvm install node
+  - nvm install 8
   - node -v
   - npm install npm -g
 
