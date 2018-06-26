@@ -239,7 +239,7 @@ gulp.task('critical', ['jekyll-build', 'critical:concat']);
 gulp.task('critical:concat', ['critical:generate'], function () {
   gulp.src('build/critical-*.css')
       .pipe(concatCss(config.paths.criticalCss))
-      .pipe(purge())
+      // .pipe(purge())
       .pipe(csso())
       .pipe(gulp.dest('.'));
 });
