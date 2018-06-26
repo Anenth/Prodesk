@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Benefits of a Standing Desk
+author: 0
 ---
 
 ## Boost Productivity at Work
