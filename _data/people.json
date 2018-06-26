@@ -11,6 +11,14 @@
       co-title: "Co-founder",
       title: "Marin Engineer",
       email: "psachwinlal@gmail.com"
+    }
+  ],
+  writers: {
+    0: {
+      name: "Prodesk team"
+    },
+    1: {
+      name: "Niveditha"
     } 
-  ]
+  }
 }

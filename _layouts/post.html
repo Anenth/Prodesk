@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign authors = site.data.people.writers %}
+{% assign author = authors[page.author] %}
 <article class="p-b-50 p-t-50 blog-article">
   <div class="container p-b-50 p-t-50">
     <div class="m-t-20">
@@ -19,6 +21,8 @@ layout: default
         <div class="entry">
           {{ content }}
         </div>
+
+        <div class="blockquote__author">Written by <span class="bold">{{author.name}}</span></div>   
       </div>
     </div>
   </div>        

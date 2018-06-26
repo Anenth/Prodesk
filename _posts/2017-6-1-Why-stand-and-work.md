@@ -2,6 +2,7 @@
 layout: post
 title:  Why Stand & Work?
 sub-title: TIME TO TAKE A STAND
+author: 0
 ---
 
 Too much of anything kills. The same is true of fried food, alcohol, and now – researchers have found out – ‘Sitting’. Sitting

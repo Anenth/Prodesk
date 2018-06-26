@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Prodesk - Magic for your spine!
+author: 1
 ---
 
 When my team approached me complaining of back pains that were both repetitive and excruciating in nature, I knew it had to be more than bad postures or furniture that wasn't ergonomically designed. I had to come with an alternate solution to this urban menace. A friend suggested we take turns sitting and standing while working and also adjust the height of our monitor or laptop display screens to that of 180* with our eyes. He mentioned that he has battled pains of this nature for a while now and found this method to be most effective.

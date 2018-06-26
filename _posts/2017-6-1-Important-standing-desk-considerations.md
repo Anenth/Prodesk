@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Important Standing Desk considerations
+author: 0
 ---
 
 Are you inspired to take your office space to a higher level? Once you have taken the First step
