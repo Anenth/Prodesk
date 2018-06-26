@@ -18,6 +18,7 @@ node_modules/
 /log/*
 !/log/.keep
 /tmp
+/build
 
 # Firebase
 functions/.runtimeconfig.json

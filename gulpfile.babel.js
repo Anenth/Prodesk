@@ -6,13 +6,11 @@ import eslint       from 'gulp-eslint';
 import gulp         from 'gulp';
 import imagemin     from 'gulp-imagemin';
 import sourcemaps   from 'gulp-sourcemaps';
-import named        from 'vinyl-named';
 import newer        from 'gulp-newer';
 import plumber      from 'gulp-plumber';
 import pngquant     from 'imagemin-pngquant';
 import postcss      from 'gulp-postcss';
 import sass         from 'gulp-sass';
-import uglify       from 'gulp-uglify';
 import watch        from 'gulp-watch';
 // var webpack      = require('webpack-stream');
 const browsersync = Browsersync.create();
@@ -22,6 +20,10 @@ import webpackConfig from './webpack.config.babel';
 import WebpackDevServer from 'webpack-dev-server';
 import gutil from 'gulp-util';
 import critical from 'critical';
+import concatCss from 'gulp-concat-css';
+import csso from 'gulp-csso';
+import purge from 'gulp-css-purge';
+
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
@@ -232,14 +234,47 @@ gulp.task('default', tasks, function () {
 gulp.task('test', ['build']);
 
 
-gulp.task('critical', ['jekyll-build'], function () {
-    critical.generate({
-        base: './',
-        src: '_site/index.html',
-        css: '_site/assets/css/main.css',
-        dest: config.paths.criticalCss,
-        width: 1200,
-        height: 800,
-        minify: true
-    });
+gulp.task('critical', ['jekyll-build', 'critical:concat']);
+
+gulp.task('critical:concat', ['critical:generate'], function () {
+  gulp.src('build/critical-*.css')
+      .pipe(concatCss(config.paths.criticalCss))
+      .pipe(purge())
+      .pipe(csso())
+      .pipe(gulp.dest('.'));
 });
+
+gulp.task('critical:generate', ['jekyll-build'], function () {
+  const options = {  
+    base: './',
+    css: '_site/assets/css/main.css',
+    dimensions: [{
+      width: 1280,
+      height: 960
+    }],
+    minify: true,
+    ignore: ['font-face'],
+    pathPrefix: './build', 
+    
+  };
+
+  critical.generate({
+    ...options, 
+    src: '_site/index.html',
+    dest: './build/critical-home.css'
+  });
+
+  critical.generate({
+    ...options, 
+    src: '_site/about/index.html',
+    dest: './build/critical-about.css'
+  });
+  
+  critical.generate({
+    ...options, 
+    src: '_site/blog/index.html',
+    dest: './build/critical-blog.css'
+  });
+
+});
+
