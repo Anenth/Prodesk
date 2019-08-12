@@ -34,11 +34,11 @@ env:
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
-deploy:
-  skip_cleanup: true
-  provider: firebase
-  token:
-    secure: $FIREBASE_TOKEN
+# deploy:
+  # skip_cleanup: true
+  # provider: firebase
+  # token:
+    # secure: $FIREBASE_TOKEN
 
 after_deploy:
  - ./script/after_deploy
