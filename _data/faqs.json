@@ -1,0 +1,28 @@
+{
+  items: [
+    {
+      title: 'What is the length and depth of the laptop platform?'
+      answer: '28inches in length and 9inches in depth'
+    },
+    {
+      title: 'What is the depth range of the keyboard and mouse platform?'
+      answer: '34inches in length, 10.5inches in the keyboard area and 12inches in the mouse area'
+    },
+    {
+      title: 'What are the heights at which the laptop platform can be kept?'
+      answer: 'Prodesk support 3 heights: 21inches, 19inches & 17inches'
+    },
+    {
+      title: 'What are the heights at which the keyboard platform can be kept?'
+      answer: 'Prodesk support 3 heights: 13inches, 11inches & 9inches'
+    },
+      {
+      title: 'Can the laptop be kept on the keyboard platform?'
+      answer: 'You can, but we recommend keeping the laptop/monitor the monitor platform as it reduces the stress on the neck'
+    },
+    {
+      title: 'Where do you delivery'
+      answer: 'We delivery all over india, the delivery fees depends on the distance from our factory in Kerala, it will range from 300-900rs'
+    },
+  ]
+}

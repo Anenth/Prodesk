@@ -19,3 +19,5 @@ footer:
     url: /blog
   - title: "About us"
     url: /about
+  - title: "Faq"
+    url: /faq
