@@ -1,14 +1,14 @@
 // Variables
 // --------------------------
 
-$fa-font-path:        "../fonts" !default;
-$fa-font-size-base:   14px !default;
+$fa-font-path: "../fonts" !default;
+$fa-font-size-base: 14px !default;
 $fa-line-height-base: 1 !default;
-$fa-css-prefix:       fa !default;
-$fa-version:          "4.7.0" !default;
-$fa-border-color:     #eee !default;
-$fa-inverse:          #fff !default;
-$fa-li-width:         (30em / 14) !default;
+$fa-css-prefix: fa !default;
+$fa-version: "4.7.0" !default;
+$fa-border-color: #eee !default;
+$fa-inverse: #fff !default;
+$fa-li-width: (30em / 14) !default;
 
 $fa-var-500px: "\f26e";
 $fa-var-address-book: "\f2b9";
@@ -797,31 +797,35 @@ $fa-var-youtube: "\f167";
 $fa-var-youtube-play: "\f16a";
 $fa-var-youtube-square: "\f166";
 
-
 // Mixins
 // --------------------------
 
 @mixin fa-icon() {
   display: inline-block;
-  font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
+  font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base}
+    FontAwesome; // shortening font declaration
   font-size: inherit; // can't have font-size inherit on line above, so need to override
   text-rendering: auto; // optimizelegibility throws things off #1094
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 /* FONT PATH
  * -------------------------- */
 
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
-  src: url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
-    url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
-    url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
-    url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
-    url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
-//  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-family: "FontAwesome";
+  src: url("#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}");
+  src: url("#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}")
+      format("embedded-opentype"),
+    url("#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}")
+      format("woff2"),
+    url("#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}")
+      format("woff"),
+    url("#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}")
+      format("truetype"),
+    url("#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular")
+      format("svg");
+  //  src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
   font-weight: normal;
   font-style: normal;
 }
@@ -831,12 +835,12 @@ $fa-var-youtube-square: "\f166";
 
 .#{$fa-css-prefix} {
   display: inline-block;
-  font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
+  font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base}
+    FontAwesome; // shortening font declaration
   font-size: inherit; // can't have font-size inherit on line above, so need to override
   text-rendering: auto; // optimizelegibility throws things off #1094
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 // Icon Sizes
@@ -848,10 +852,18 @@ $fa-var-youtube-square: "\f166";
   line-height: (3em / 4);
   vertical-align: -15%;
 }
-.#{$fa-css-prefix}-2x { font-size: 2em; }
-.#{$fa-css-prefix}-3x { font-size: 3em; }
-.#{$fa-css-prefix}-4x { font-size: 4em; }
-.#{$fa-css-prefix}-5x { font-size: 5em; }
+.#{$fa-css-prefix}-2x {
+  font-size: 2em;
+}
+.#{$fa-css-prefix}-3x {
+  font-size: 3em;
+}
+.#{$fa-css-prefix}-4x {
+  font-size: 4em;
+}
+.#{$fa-css-prefix}-5x {
+  font-size: 5em;
+}
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 
@@ -1115,8 +1127,12 @@ $fa-var-youtube-square: "\f166";
 // .#{$fa-css-prefix}-angle-double-down:before { content: $fa-var-angle-double-down; }
 // .#{$fa-css-prefix}-angle-left:before { content: $fa-var-angle-left; }
 // .#{$fa-css-prefix}-angle-right:before { content: $fa-var-angle-right; }
-.#{$fa-css-prefix}-angle-up:before { content: $fa-var-angle-up; }
-.#{$fa-css-prefix}-angle-down:before { content: $fa-var-angle-down; }
+.#{$fa-css-prefix}-angle-up:before {
+  content: $fa-var-angle-up;
+}
+.#{$fa-css-prefix}-angle-down:before {
+  content: $fa-var-angle-down;
+}
 // .#{$fa-css-prefix}-desktop:before { content: $fa-var-desktop; }
 // .#{$fa-css-prefix}-laptop:before { content: $fa-var-laptop; }
 // .#{$fa-css-prefix}-tablet:before { content: $fa-var-tablet; }
@@ -1229,7 +1245,9 @@ $fa-var-youtube-square: "\f166";
 // .#{$fa-css-prefix}-youtube-play:before { content: $fa-var-youtube-play; }
 // .#{$fa-css-prefix}-dropbox:before { content: $fa-var-dropbox; }
 // .#{$fa-css-prefix}-stack-overflow:before { content: $fa-var-stack-overflow; }
-// .#{$fa-css-prefix}-instagram:before { content: $fa-var-instagram; }
+.#{$fa-css-prefix}-instagram:before {
+  content: $fa-var-instagram;
+}
 // .#{$fa-css-prefix}-flickr:before { content: $fa-var-flickr; }
 // .#{$fa-css-prefix}-adn:before { content: $fa-var-adn; }
 // .#{$fa-css-prefix}-bitbucket:before { content: $fa-var-bitbucket; }
@@ -1638,9 +1656,19 @@ $fa-var-youtube-square: "\f166";
 // .#{$fa-css-prefix}-wpexplorer:before { content: $fa-var-wpexplorer; }
 // .#{$fa-css-prefix}-meetup:before { content: $fa-var-meetup; }
 
-.#{$fa-css-prefix}-phone:before { content: $fa-var-phone; }
-.#{$fa-css-prefix}-map:before { content: $fa-var-map; }
-.#{$fa-css-prefix}-envelope:before { content: $fa-var-envelope; }
-.#{$fa-css-prefix}-twitter:before { content: $fa-var-twitter; }
+.#{$fa-css-prefix}-phone:before {
+  content: $fa-var-phone;
+}
+.#{$fa-css-prefix}-map:before {
+  content: $fa-var-map;
+}
+.#{$fa-css-prefix}-envelope:before {
+  content: $fa-var-envelope;
+}
+.#{$fa-css-prefix}-twitter:before {
+  content: $fa-var-twitter;
+}
 .#{$fa-css-prefix}-facebook-f:before,
-.#{$fa-css-prefix}-facebook:before { content: $fa-var-facebook; }
+.#{$fa-css-prefix}-facebook:before {
+  content: $fa-var-facebook;
+}

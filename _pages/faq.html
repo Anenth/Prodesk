@@ -1,0 +1,27 @@
+---
+layout: default
+title: Faqs
+permalink: /faq/
+active: faq
+---
+
+<section class="p-b-50 p-t-50 container blog-article">
+  <h1 class="text-center m-t-50 color-text-gradient">Faqs</h1>
+  {% assign faqs = site.data.faqs.items %}
+  <div class="row">
+    <div class="col-md-10 col-lg-8">
+      <ol>
+        {% for faq in faqs %}
+        <li>
+          <article class="m-b-50">
+            <h4 class="no-margin">{{ faq.title }}</h4>
+            <p>
+              {{ faq.answer }}
+            </p>
+          </article>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
