@@ -44,7 +44,7 @@
     "imagemin-pngquant": "^5.0.1",
     "loadcss": "^0.0.2",
     "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1",
+    "webpack-dev-server": "^3.1.11",
     "webpack-stream": "^3.2.0",
     "yargs": "^8.0.2"
   },
