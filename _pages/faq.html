@@ -9,15 +9,19 @@ active: faq
   <h1 class="text-center m-t-50 color-text-gradient">Faqs</h1>
   {% assign faqs = site.data.faqs.items %}
   <div class="row">
-    <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-      {% for faq in faqs %}
-      <article class="m-b-50">
-        <h4 class="no-margin">{{ faq.title }}</h4>
-        <p>
-          {{ faq.answer }}
-        </p>
-      </article>
-      {% endfor %}
+    <div class="col-md-10 col-lg-8">
+      <ol>
+        {% for faq in faqs %}
+        <li>
+          <article class="m-b-50">
+            <h4 class="no-margin">{{ faq.title }}</h4>
+            <p>
+              {{ faq.answer }}
+            </p>
+          </article>
+        </li>
+        {% endfor %}
+      </ol>
     </div>
   </div>
 </section>

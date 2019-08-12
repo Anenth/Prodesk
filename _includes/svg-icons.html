@@ -1,61 +1,68 @@
-{% assign links = site.social %}
-
-
-{% if links.facebook %}
-    <a class="text-master m-r-20 block"
-    target="_blank" 
-    href="https://www.facebook.com/{{ links.facebook }}">
-        <i class="fa fa-facebook-f m-r-5"></i>
-        Facebook
-    </a>
-{% endif %}
-{% if links.instagram %}
-    <a class="text-master m-r-20 block"
-    target="_blank" 
-    href="https://instagram.com/{{ links.instagram }}">
-        <i class="fa fa-instagram"></i>
-    </a>
-{% endif %}
-{% if links.linkedin %}
-    <a class="text-master m-r-20 block"
-    target="_blank" 
-    href="https://www.linkedin.com/in/{{ links.linkedin }}">
-        <i class="linkedin"></i>
-    </a>
-{% endif %}
-{% if links.pinterest %}
-    <a class="text-master m-r-20 block"
-    target="_blank" 
-    href="https://www.pinterest.com/{{ links.pinterest }}">
-        <i class="pinterest"></i>
-    </a>
-{% endif %}
-{% if links.rss %}
-    <a class="text-master m-r-20 block"
-    target="_blank" 
-    href="{{ site.baseurl }}/feed.xml">
-        <i class="rss"></i>
-    </a>
-{% endif %}
-{% if links.twitter %}
-    <a class="text-master m-r-20 block"
-    target="_blank" 
-    href="https://www.twitter.com/{{ links.twitter }}">
-        <i class="fa fa-twitter"></i>
-        Twitter
-    </a>
-{% endif %}
-{% if links.youtube %}
-    <a class="text-master m-r-20 block"
-    target="_blank" 
-    href="https://youtube.com/{{ links.youtube }}">
-        <i class="youtube"></i>
-    </a>
-{% endif %}
-{% if links.googleplus %}
-    <a class="text-master m-r-20 block"
-    target="_blank" 
-    href="https://plus.google.com/{{ links.googleplus }}">
-        <i class="googleplus"></i>
-    </a>
+{% assign links = site.social %} {% if links.facebook %}
+<a
+  class="text-master m-r-20 block"
+  target="_blank"
+  href="https://www.facebook.com/{{ links.facebook }}"
+>
+  <i class="fa fa-facebook-f m-r-5"></i>
+  Facebook
+</a>
+{% endif %} {% if links.instagram %}
+<a
+  class="text-master m-r-20 block"
+  target="_blank"
+  href="https://instagram.com/{{ links.instagram }}"
+>
+  <i class="fa fa-instagram"></i>
+  Instagram
+</a>
+{% endif %} {% if links.linkedin %}
+<a
+  class="text-master m-r-20 block"
+  target="_blank"
+  href="https://www.linkedin.com/in/{{ links.linkedin }}"
+>
+  <i class="linkedin"></i>
+</a>
+{% endif %} {% if links.pinterest %}
+<a
+  class="text-master m-r-20 block"
+  target="_blank"
+  href="https://www.pinterest.com/{{ links.pinterest }}"
+>
+  <i class="pinterest"></i>
+</a>
+{% endif %} {% if links.rss %}
+<a
+  class="text-master m-r-20 block"
+  target="_blank"
+  href="{{ site.baseurl }}/feed.xml"
+>
+  <i class="rss"></i>
+</a>
+{% endif %} {% if links.twitter %}
+<a
+  class="text-master m-r-20 block"
+  target="_blank"
+  href="https://www.twitter.com/{{ links.twitter }}"
+>
+  <i class="fa fa-twitter"></i>
+  Twitter
+</a>
+{% endif %} {% if links.youtube %}
+<a
+  class="text-master m-r-20 block"
+  target="_blank"
+  href="https://youtube.com/{{ links.youtube }}"
+>
+  <i class="youtube"></i>
+</a>
+{% endif %} {% if links.googleplus %}
+<a
+  class="text-master m-r-20 block"
+  target="_blank"
+  href="https://plus.google.com/{{ links.googleplus }}"
+>
+  <i class="googleplus"></i>
+</a>
 {% endif %}
