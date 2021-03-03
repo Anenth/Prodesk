@@ -6,7 +6,7 @@
     "firebase-admin": "~4.2.1",
     "firebase-functions": "^0.5.7",
     "less": "^2.7.2",
-    "pug": "^2.0.0-rc.2",
+    "pug": "^3.0.1",
     "sendgrid": "^5.1.2"
   },
   "private": true
